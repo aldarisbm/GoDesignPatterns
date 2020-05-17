@@ -1,4 +1,4 @@
-package DeepCopying
+package Prototype
 
 import "fmt"
 
