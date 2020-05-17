@@ -1,0 +1,6 @@
+New York
+10
+St Louis
+300
+Berlin
+400
