@@ -8,7 +8,16 @@ type Person interface {
 
 type person struct {
 	name string
-	age int
+	age  int
+}
+
+type tiredPerson struct {
+	name string
+	age  int
+}
+
+func (p *tiredPerson) SayHello() {
+	fmt.Printf("Hi, I'm too tired to talk, sorry!")
 }
 
 func (p *person) SayHello() {
@@ -16,10 +25,13 @@ func (p *person) SayHello() {
 }
 
 func NewPerson(name string, age int) Person {
+	if age > 100 {
+		return &tiredPerson{name, age}
+	}
 	return &person{name, age}
 }
 
 func main() {
-	p := NewPerson("James", 32)
+	p := NewPerson("James", 101)
 	p.SayHello()
 }
