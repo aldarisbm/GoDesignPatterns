@@ -1,4 +1,4 @@
-package main
+package Singleton
 
 import (
 	"bufio"
